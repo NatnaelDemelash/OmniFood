@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap");
 
+/* 
+- FONT SIZES (Px)
+
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 /
+
+86 / 98
+
+- SPACING SYSTEM (Px)
+
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +25,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +33,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  overflow-x: hidden;
 }
 
 strong {
@@ -28,6 +42,23 @@ strong {
 
 .center-text {
   text-align: center;
+}
+
+.mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav-icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333;
+}
+
+.mobile-nav-icon[name="close-outline"] {
+  display: none;
 }
 
 /***** GENERAL REUSABLE *****/
@@ -44,6 +75,10 @@ strong {
   row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -56,9 +91,9 @@ strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.grid--5-cols {
+/* .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
-}
+} */
 
 .grid--footer {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
@@ -155,6 +190,7 @@ strong {
   background: #fdf2e9;
   padding: 0 4.8rem;
   height: 9.6rem;
+  position: relative;
 }
 
 .header .logo,
@@ -324,6 +360,7 @@ strong {
 .step-img {
   width: 35%;
 }
+
 .step-number {
   font-size: 8.8rem;
   color: #ddd;
@@ -427,6 +464,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-item span {
